@@ -11,7 +11,7 @@ from flask.ext.login import login_user, login_required, logout_user
 from flask import Flask, render_template, request, url_for
 from flask import abort, jsonify, redirect
 from threading import Thread
-from flask.ext.socketio import SocketIO, emit
+# from flask.ext.socketio import SocketIO, emit
 
 from flaskapp import *
 

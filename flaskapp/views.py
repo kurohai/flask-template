@@ -1,10 +1,5 @@
 from flask import Blueprint
 from flask import render_template, request, url_for
-from dicto import dicto
-from sqlalchemy import and_
-from pprint import pprint
-import codecs
-import os
 from flaskapp import *
 
 

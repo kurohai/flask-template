@@ -5,7 +5,6 @@ from wtforms import TextAreaField, StringField
 from wtforms.validators import Length, DataRequired
 from wtforms import validators
 from flask.ext.wtf import Form
-from flask.ext.pagedown.fields import PageDownField
 from wtforms.fields import SubmitField
 
 
@@ -27,6 +26,3 @@ class InvoiceSearchForm(Form):
     end_date = StringField('end_date', validators=[DataRequired()])
 
 
-class PageDownFormExample(Form):
-    pagedown = PageDownField('Enter your markdown')
-    submit = SubmitField('Submit')

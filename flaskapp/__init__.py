@@ -14,8 +14,6 @@ from flask import Flask
 import datetime
 import os
 from dicto import dicto
-import flask.ext.restless
-from flask.ext.socketio import SocketIO
 from flask.ext.admin import Admin
 from flask.ext.admin.contrib.sqla import ModelView
 
