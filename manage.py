@@ -2,7 +2,7 @@ import os
 import cherrypy
 from cherrypy import wsgiserver
 from cherrypy.process.plugins import Daemonizer,PIDFile
-from flask.ext.script import Manager
+from flask_script import Manager
 from flaskapp import flasktemplate, Base, engine
 
 
@@ -17,7 +17,7 @@ def db():
 @manager.command
 def quick():
     d = wsgiserver.WSGIPathInfoDispatcher({'/': flasktemplate})
-    server = wsgiserver.CherryPyWSGIServer(('0.0.0.0', 80), d, server_name=flasktemplate.appname, )
+    server = wsgiserver.CherryPyWSGIServer(('0.0.0.0', 8080), d, server_name=flasktemplate.appname, )
     try:
         server.start()
     except KeyboardInterrupt:
