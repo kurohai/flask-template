@@ -1,0 +1,9 @@
+flask
+flask-Login
+flask-Script
+flask-SQLAlchemy
+flask-admin
+cherrypy
+WTForms
+SQLAlchemy
+flask-wtf
