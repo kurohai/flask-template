@@ -14,8 +14,8 @@ from flask import Flask
 import datetime
 import os
 from dicto import dicto
-from flask.ext.admin import Admin
-from flask.ext.admin.contrib.sqla import ModelView
+from flask_admin import Admin
+from flask_admin.contrib.sqla import ModelView
 
 
 appname = 'Flask Template'
@@ -54,9 +54,9 @@ Base.metadata = metadata
 Base.query = db_session.query_property()
 
 
-from models import *
+from models import User, Log
 from app import flasktemplate
-from forms import *
+from forms import LoginForm, SearchForm
 from views import blueprint
 from log_view import log_blueprint
 

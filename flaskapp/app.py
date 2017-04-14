@@ -1,7 +1,7 @@
 #!/bin/env python
 
 from flask import Flask
-from flask.ext.pagedown import PageDown
+from flask_pagedown import PageDown
 from flaskext.markdown import Markdown
 
 

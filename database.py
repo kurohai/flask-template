@@ -1,13 +1,13 @@
 from sqlalchemy.orm import scoped_session, sessionmaker
-from flaskapp import app, Base, User, session, engine, log
+from flaskapp import app, Base, User, session, engine, Log
 import time
 
 
 def initdb():
     Base.metadata.create_all(bind=engine)
-    log.info('tables created')
+    # log.info('tables created')
     mkusr()
-    log.info('user created')
+    # log.info('user created')
 
 
 def deldb():

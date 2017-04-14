@@ -6,12 +6,12 @@ import hashlib
 from pprint import pprint
 from flask import g, Blueprint, url_for
 from flask import render_template, request
-from flask.ext.login import LoginManager, current_user
-from flask.ext.login import login_user, login_required, logout_user
+from flask_login import LoginManager, current_user
+from flask_login import login_user, login_required, logout_user
 from flask import Flask, render_template, request, url_for
 from flask import abort, jsonify, redirect
 from threading import Thread
-# from flask.ext.socketio import SocketIO, emit
+# from flask_socketio import SocketIO, emit
 
 from flaskapp import *
 
