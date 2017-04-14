@@ -7,7 +7,7 @@ from sqlalchemy import String, Text, BigInteger
 from sqlalchemy.orm import relationship, synonym
 from sqlalchemy.ext.declarative import declarative_base
 from werkzeug import check_password_hash, generate_password_hash
-from flask.ext.login import AnonymousUserMixin
+from flask_login import AnonymousUserMixin
 from sqlalchemy.ext.declarative import *
 from dicto import dicto
 import time

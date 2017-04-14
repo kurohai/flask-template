@@ -1,9 +1,9 @@
 
-from flask.ext.login import LoginManager
-from flask.ext.login import login_user
-from flask.ext.login import login_required
-from flask.ext.login import logout_user
-from flask.ext.login import AnonymousUserMixin
+from flask_login import LoginManager
+from flask_login import login_user
+from flask_login import login_required
+from flask_login import logout_user
+from flask_login import AnonymousUserMixin
 from flaskapp import flasktemplate
 
 class Anonymous(AnonymousUserMixin):
