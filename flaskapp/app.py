@@ -1,6 +1,6 @@
 #!/bin/env python
 
-from flask import Flask
+from flask import Flask, render_template
 from flask_pagedown import PageDown
 from flaskext.markdown import Markdown
 from config import DevelopmentConfig, TestingConfig, ProductionConfig, StagingConfig
@@ -35,4 +35,4 @@ def global_settings():
 @flasktemplate.errorhandler(404)
 def error_not_found(error):
     """Render a custom template when responding with 404 Not Found."""
-    return 'No page here, dood. 404!', 404
+    return render_template('error/not_found.html'), 404
