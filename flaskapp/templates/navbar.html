@@ -1,7 +1,8 @@
 <div class=" navbar navbar-fixed-top navbar navbar-default">
     <div class="navbar-inner">
         <div class="container">
-            <a href="{{ url_for('{0}.home'.format(appnamed())) }}" class="brand">{{ appname() }}</a>
+            <a href="{{ url_for('{0}.home'.format(appnamed())) }}" class="navbar-brand">{{ appname() }}</a>
+
             <ul class="nav navbar-nav">
                 {% if global_settings().logging %}
                 <li>
