@@ -1,6 +1,6 @@
 appdirs==1.4.3
 cheroot==5.4.0
-CherryPy==4.0.0
+CherryPy==10.2.1
 click==6.7
 flametree==0.1.5
 Flask==0.12.1
@@ -33,5 +33,6 @@ restless==2.0.3
 six==1.10.0
 SQLAlchemy==1.1.9
 tempora==1.6.1
+uWSGI==2.0.15
 Werkzeug==0.12.1
 WTForms==2.1

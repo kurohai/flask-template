@@ -9,6 +9,7 @@
 from sqlalchemy.orm import Session, scoped_session, sessionmaker
 from sqlalchemy import create_engine, inspect
 from sqlalchemy import MetaData, Table
+from sqlalchemy.pool import QueuePool, SingletonThreadPool
 from sqlalchemy.ext.declarative import *
 from flask import Flask
 import datetime
@@ -16,15 +17,9 @@ import os
 from dicto import dicto
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
+from config import DevelopmentConfig, TestingConfig, ProductionConfig, StagingConfig
 
-
-appname = 'Flask Template'
-appnamed = 'flasktemplate'
-pwd = os.path.abspath(os.curdir)
-
-dbpath = '{dir}/{app}.db'.format(dir=pwd, app=appnamed)
-dburi = 'sqlite:///{db}'.format(db=dbpath)
-
+settings = DevelopmentConfig()
 
 @as_declarative()
 class BaseBase(dicto):
@@ -39,7 +34,7 @@ class BaseBase(dicto):
 
 Base = BaseBase
 
-engine = create_engine(dburi)
+engine = create_engine(settings.dburi)
 metadata = MetaData(bind=engine)
 session = Session(engine)
 db_session = scoped_session(
@@ -62,4 +57,5 @@ from log_view import log_blueprint
 
 
 flasktemplate.register_blueprint(blueprint)
-flasktemplate.register_blueprint(log_blueprint)
+if settings.logging:
+    flasktemplate.register_blueprint(log_blueprint)
