@@ -40,12 +40,12 @@ def quick(port=8080):
     # Example for a 2nd server (same steps as above):
     # Remember to use a different port
 
-    server2             = cherrypy._cpserver.Server()
+    # server2             = cherrypy._cpserver.Server()
 
-    server2.socket_host = "0.0.0.0"
-    server2.socket_port = 8081
-    server2.thread_pool = 30
-    server2.subscribe()
+    # server2.socket_host = "0.0.0.0"
+    # server2.socket_port = 8081
+    # server2.thread_pool = 30
+    # server2.subscribe()
 
     # Start the server engine (Option 1 *and* 2)
 
